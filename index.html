@@ -8,6 +8,9 @@
     <script src="assets/sparticles.min.js"></script>
     <script>
     $(function() {
+        const items = ['purple', 'green', 'orange', 'red'];
+
+        const randomItem = items[Math.floor(Math.random() * items.length)];
 	  var $main = $(".bbox");
 	  window.mySparticles = new Sparticles($main.get(0), {
         shape:"square",
@@ -15,7 +18,7 @@
         direction: 90,
         alphaSpeed: 0,
         yVariance:0,
-        color: "orange",
+        color: randomItem,
         maxSize: 30,
         minSize: 10,
         speed: 10,
